@@ -1,0 +1,35 @@
+<%include _header%>
+
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/zombies/edit/<%= zombie.id%>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" value="<%= zombie.nombre%>">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" name="email" value="<%= zombie.email%>">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <input type="text" class="form-control" name="tipo" value="<%= zombie.tipo%>">
+            </div>
+            
+            <% if(mensajeError.lenght>0){%>
+            <div id="messageNew"> 
+                <div class="alert alert-warning alert-dismissible fade show mensaje" role="alert">
+                  <strong><%= mensajeError%></strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          </div>
+          <% } %>
+
+                <button class="btn normalBtn"><i class="fas fa-user-edit"></i>Actualizar</button>
+        </form>
+    </div>
+</div>
+
+<%include _footer%>

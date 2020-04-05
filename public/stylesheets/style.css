@@ -1,0 +1,22 @@
+td i{
+  margin: 0 10px;
+  cursor:pointer;
+  font-size: 40px;
+}
+
+.fasSt{
+  color: palevioletred;
+}
+
+.fasSt:hover{
+  color: rgb(136, 39, 99);
+}
+
+.normalBtn{
+  background-color: palevioletred;
+  color: white;
+}
+
+#menu{
+  color: palevioletred;
+}
